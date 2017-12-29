@@ -1,0 +1,99 @@
+{
+	"variables": [],
+	"info": {
+		"name": "Maximo",
+		"_postman_id": "c80faf78-ac61-911a-6989-611fc1b9ac96",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Signin",
+			"request": {
+				"url": "http://wamasd1.aepsc.com:9080/maximo/oslc/login",
+				"method": "POST",
+				"header": [
+					{
+						"key": "maxauth",
+						"value": "d2lsc29uOndpbHNvbg==",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": "d"
+			},
+			"response": []
+		},
+		{
+			"name": "API Metadata",
+			"request": {
+				"url": "http://wamasd1.aepsc.com:9080/maximo/oslc/apimeta",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "whoami",
+			"request": {
+				"url": "http://wamasd1.aepsc.com:9080/maximo/oslc/whoami",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Create Asset",
+			"request": {
+				"url": {
+					"raw": "http://wamasd1.aepsc.com:9080/maximo/oslc/os/mxasset?lean=1",
+					"protocol": "http",
+					"host": [
+						"wamasd1",
+						"aepsc",
+						"com"
+					],
+					"port": "9080",
+					"path": [
+						"maximo",
+						"oslc",
+						"os",
+						"mxasset"
+					],
+					"query": [
+						{
+							"key": "lean",
+							"value": "1",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r    \"assetnum\":\"FAHEY3\",\r    \"siteid\":\"BEDFORD\",\r    \"description\":\"Fahey Asset\"\r }        "
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "public query",
+			"request": {
+				"url": "http://wamasd1.aepsc.com:9080/maximo/oslc/os/mxorganization",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
